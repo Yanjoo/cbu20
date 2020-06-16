@@ -280,6 +280,18 @@ void prtcode(int token, int val)
 		fprintf(fp, "+\n");
 		fprintf(fp, ":=\n");
 		break;
+	case SA:
+		fprintf(fp, "-\n");
+		fprintf(fp, ":=\n");
+		break;
+	case MA:
+		fprintf(fp, "*\n");
+		fprintf(fp, ":=\n");
+		break;
+	case DA:
+		fprintf(fp, "/\n");
+		fprintf(fp, ":=\n");
+		break;
    case STMTLIST:
    default:
       break;
