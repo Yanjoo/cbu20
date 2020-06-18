@@ -33,7 +33,6 @@ id      {letter}({letter}|{digit})*
 시작         {return(START);}
 끝            {return(END);}
 if          {return(IF);}
-else      {return(ELSE);}
 fi         {return(FIN);}
 while      {return(WHILE);}
 done		{return(DONE);}

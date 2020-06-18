@@ -56,7 +56,7 @@ int      insertsym(char *);
 void    printLabel();
 %}
 
-%token   ADD SUB ASSGN ID NUM STMTEND START END ID2 ID3 MUL DIV IF ELSE WHILE FIN DONE LT GT LE GE EQ NE AA SA MA DA
+%token   ADD SUB ASSGN ID NUM STMTEND START END ID2 ID3 MUL DIV IF WHILE FIN DONE LT GT LE GE EQ NE AA SA MA DA
 %right ASSGN
 %left ADD SUB
 %left MUL DIV MOD
@@ -187,7 +187,7 @@ void DFSTree(Node * n)
 {
    if (n==NULL) return;
    if (n->token == WHILE)
-		fprintf(fp, "LABEL LOOP%d\n", ++loopno);
+		fprintf(fp, "LABEL LOOP%d\n", cnt+1);
    DFSTree(n->son);
    prtcode(n->token, n->tokenval);
    DFSTree(n->brother);
